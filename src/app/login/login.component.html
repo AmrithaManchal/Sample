@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Book My Show</h1>
+  <div>
+    <div class="BookMyShow">
+      <img class="logo" src="assets/img/booklogo.png" alt="img">
+    </div>
+    <div class="desc">BookMyShow is India's leading online ticketing platform, allowing users to book tickets for
+      movies, events, concerts, plays, sports, and other entertainment activities. </div>
+    <div class="login-form">
+      <form action="/submit" method="POST">
+        <!-- Text Input -->
+        <label for="name">Username:</label>
+        <input type="text" id="username" name="username" class="form-control" [(ngModel)]="username" />
+        <br><br>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" />
+        <br><br>
+
+        <!-- Checkbox -->
+        <label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <br><br>
+
+        <!-- Submit Button -->
+        <div class="error"> {{errMsg}} </div>
+        <button type="submit" (click)="login()">Login</button>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
